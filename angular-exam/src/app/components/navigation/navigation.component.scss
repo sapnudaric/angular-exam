@@ -1,0 +1,43 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #66ccff;
+    cursor: pointer;
+}
+
+.row {
+    margin-left: 10em;
+    margin-right: 10em;
+    padding-top: 30px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+td {
+    border: solid;
+    padding: 5px;
+    text-align: left;
+}

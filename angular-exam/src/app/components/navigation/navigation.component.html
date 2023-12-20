@@ -1,0 +1,38 @@
+<nav [@fadeInOut]>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="row">
+        <div>
+            <input [(ngModel)]="searchText" placeholder="Filter">
+            <button (click)="filter()">Apply Filter</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th (click)="sort()">Property</th>
+                    <th (click)="sortTitle()">Title</th>
+                    <th>Image</th>
+                    <th>Created</th>
+                    <th>Updated</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of filteredData">
+                    <td>{{ item.type }}</td>
+                    <td>{{ item.attributes.display_properties.type }}</td>
+                    <td>{{ item.attributes.content }}</td>
+                    <td>{{ item.attributes.display_properties.image }}</td>
+                    <td>{{ item.attributes.created_at | date: "medium" }}</td>
+                    <td>{{ item.attributes.updated_at | date: "medium" }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
